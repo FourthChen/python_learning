@@ -1,0 +1,86 @@
+
+django是什么？
+    django是一个web框架
+        web框架？
+
+    python 下最强大的web框架
+    全球第五大web框架
+    Instgram 图片涉及
+
+django 发展史
+
+django 的优势
+    开发效率 高
+    功能强大
+HTTP特性
+基于TCP/IP协议
+    ·你每次打开百度或其它网站，都需要先建立好TCP/IP会话，当然这个浏览器会帮你做了。
+短连接
+    ·你打开 https://www.luffycity.com/  或其它网站， 当服务器端把这个页面的内容全返回后，就把这次连接断开了，会话就结束了，你在浏览器上看到页面内容已经是下载到本地的了，所以此时如果服务器端更新了内容，你本地的页面自然是不会跟着变的。除非你再刷新一下，这样就又进行了一次会话。那为何是短连接呢？你想一想
+被动响应
+    ·这个很好理解，你不请求百度，百度是不会主动连接你的。
+无状态
+    ·无状态是指，当浏览器发送请求给服务器的时候，服务器响应，但是同一个浏览器再发送请求给服务器的时候，他会响应，但是他不知道你就是刚才那个浏览器，简单地说，就是服务器不会去记得你，所以是无状态协议。
+
+WSGI（Web Server Gateway Interface）是一种规范，
+    它定义了使用python编写的web app（应用程序）与web server（socket服务端）之间接口格式，实现web app与web server间的解耦。
+
+
+1.创建Project
+
+你想做个网站，首先我们要创建一个django project, 以后的代码都放在这个项目里。
+django-admin  startproject  mysite #项目名是mysite　
+
+mysite
+        ├── manage.py       # 管理程序的文件，启动和结束等。
+        └── my site
+            ├── __init__.py
+            ├── settings.py     # 程序的配置文件
+            ├── urls.py     # 程序的路由系统，即：url和处理其函数的对应的关系
+            └── wsgi.py     # 指定框架的wsgi
+
+2.创建app
+    diango-admin.py startapp app01
+
+    python manage.py startapp app01
+
+3.第一次django请求
+    1.匹配路由，路由分发器查找用户请求的url对应关系
+        1.找到了业务函数，就调用
+        2.找不到就报404
+    2.业务函数，执行业务逻辑
+    3.返回数据给浏览器
+
+
+    1.  urls.py  编写路由
+    2.  在views.py 写一个业务函数
+        1.编写业务代码
+        2.通过HttpResponse方法返回数据给前端
+
+    3.python manage.py runserver 0.0.0.0:8000    启动管理程序
+
+4.模板初探
+    1.配置setting.py
+        TEMPLATES = [  #模板 ，html文件
+            {
+                'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                'DIRS': [os.path.join(BASE_DIR,"html")], #html文件夹的位置
+                'APP_DIRS': True,
+                'OPTIONS': {
+                    'context_processors': [
+                        'django.template.context_processors.debug',
+                        'django.template.context_processors.request',
+                        'django.contrib.auth.context_processors.auth',
+                        'django.contrib.messages.context_processors.messages',
+                    ],
+                },
+            },
+        ]
+    2.views.py  调用render函数
+        return render(reuqest,'form.html')
+    刚才在开发用户登录页面时，我们的请求处理流程是这样的， 请求-> url.py -> views.py -> template -> 浏览器，
+    MVC 是一种使用 MVC（Model View Controller 模型-视图-控制器）设计创建 Web 应用程序的模式
+
+    MVC  views负责  业务逻辑处理+数据展示
+    MTV  views   业务逻辑处理
+            Templates 数据展示

@@ -1,0 +1,77 @@
+接下来内容：
+    第一部分：面对对象
+    第二部分：网络编程
+    第三部分：并发编程
+内容回顾:
+    1.面向过程
+    2.函数式编程
+    3.为什么要将某些函数写在指定文件中？
+        对函数进行归类
+今日内容:
+    1.函数式编程和面向对象的对比
+    2.面向对象代码如何编写
+    3.对象三大特性：封装/继承/多态
+
+
+内容详细：
+    1.函数式编程和面向对象的对比
+        函数：定义简单，调用简单
+        面对对象：定义复杂/调用复杂。 好处：归类
+        总结：
+            函数式编程可能比面向对象好
+            python中支持两种编程方式
+            面向对象方式格式：
+                class 类名：
+                    def 函数名(self):
+                        pass
+                x1=类名()
+                x1.函数名()
+            构造方法：
+                class pp:
+                    def __init__(self,name):  构造方法，目的是进行数据初始化
+                        self.name=name
+                        self.age=18
+                obj=pp("小米")
+                通过构造方法，可以将数据进行打包，后面使用时直接调用即可
+
+    2.面向对象代码如何编写
+        a.规则
+            class foo:
+                def __init__():
+                    self.name=name
+                def detail(self,msg):
+                    print(self.name,msg)
+            obj=foo()
+            obj.detail()
+
+        b.什么时候写？如何写
+            方式一：归类+提取公共值
+
+    3.面向对象的三大特性：封装/继承/多态
+        封装：
+            将相关功能封装到一个类中:
+                class msg:
+                    def email(self):pass
+                    def msg(self):pass
+                    def wechat(self):pass
+              将数据封装到一个对象中：
+              class person:
+                def __init__(self,name,age,gender):
+                    self.name=name
+                    self.age=age
+                    self.gender=gender
+                obj=person('孙福来',10,'男')
+        继承：
+            #原则：先在自己类中找，没有就去父类
+            总结：
+                class foo(父类):
+                    pass
+                支持多继承（先找左，再找右）
+                为什么要继承？ 实现代码重用
+        多态：多种形态或多种状态
+            def func(arg):
+                arg[0]
+
+            func([11,33])
+            func([1,2,3])
+            func('aqzwsxedc')

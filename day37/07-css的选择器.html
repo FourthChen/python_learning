@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		
+		<style type="text/css">
+			/*1.标签选择器   选中的时共性*/
+			p{
+				color: red;
+			}
+			/*重置样式*/
+			ul,ol{    /*  组合选择器*/
+				list-style: none;
+			}
+			/*2.类选择器   .类名   选中的也是共性*/
+			.active{
+				color: yellow;
+				font-size: 30px;
+			}
+			/*3.id选择器   选中的是”特性 “ #表示   id是唯一的*/
+			#p1{
+				color: gold;
+			}
+			/*4.  通配符选择器    在工作中不要使用这个*/
+			*{
+				padding: 0;
+			}
+			a{
+				/*没有线---清除下划线*/
+				text-decoration: none;
+			}
+			.baidu{
+				color: blue;
+				/*下划线*/
+				text-decoration: underline;
+				/*显示小手的状态*/
+				cursor: pointer;
+			}
+			input{
+				border: none;
+				border: 1px solid red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p id="p1">alex1</p>
+		<p id="p2">alex2</p>
+		<p>alex3</p>
+		<p>alex4</p>
+		<p>alex5</p>
+		<ul>
+			<li class="active">alex</li>
+			<li class="active">wusir</li>
+		</ul>
+		<a href="">百度一下</a>
+		<span class="baidu">
+			百度一下啊
+		</span>
+		<input type="text" id="" value="" />
+	</body>
+</html>

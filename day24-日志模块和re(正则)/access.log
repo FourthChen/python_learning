@@ -1,0 +1,5 @@
+2020-05-22 15:50:06,074 - root - DEBUG -01-logging模块:  调试debug
+2020-05-22 15:50:06,076 - root - INFO -01-logging模块:  消息info
+2020-05-22 15:50:06,076 - root - WARNING -01-logging模块:  警告error
+2020-05-22 15:50:06,076 - root - ERROR -01-logging模块:  错误erro
+2020-05-22 15:50:06,076 - root - CRITICAL -01-logging模块:  严重critical

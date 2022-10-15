@@ -1,0 +1,45 @@
+三.今日主要内容
+    异常处理(处理，抛出异常，自定义异常)
+        1.产生异常，raise 异常类(),抛出异常
+        2.处理异常
+            try:
+                xxxx  #尝试执行的代码
+            except 异常类 as 变量:  #出现错误的时候，捕捉到异常
+                xxxx #处理异常
+        3.自定义异常
+            继承Exception
+        4.堆栈信息
+            import traceback
+            traceback.format_exc() 获取堆栈信息
+    约束(难)
+        一.通过抛异常
+            约束时对子类进行的约束
+            在父类中给出一个 方法。这个方法中什么都不写，就抛异常，Notmplementhod
+            在子类中把上述方法重写。
+            重写：子类重新定义父类中的方法。
+        二.抽象类和抽象方法(java,c#)
+                接口：类中都是抽象方法
+            from abc import ABCMeta, abstractmethod
+            抽象方法：抽象方法不用给出方法体，写个pass就行了
+            抽象类:
+                语法：类(metaclass=ABCMeta)
+                概念：如果类中包含了抽象方法，这个类 一定时抽象类
+                特点：抽象类一般不创建对象。
+                      抽象类中可以存在正常方法
+
+                 可以约束子类必须实现抽象方法
+    MD5加密
+        MD5加密：不可逆
+        引入模块 hashlib:
+           1.创建md5对象
+           2.把加密信息交给md5对象
+           3.获取密文
+    日志处理（重要，简单）
+        引入logging模块（basicConfig 单一日志文件  fileHandler 文件助手可以实现多文件操作）
+        简单配置即可
+        日志级别：
+            CRITIAL 最高
+            ERRO 40
+            WERN 30
+            INFO 20
+            DEBUG 10

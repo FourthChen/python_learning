@@ -1,0 +1,24 @@
+今日内容：
+    1.序列化
+        把对象打散成bytes或者字符串。方便存储和传输
+        把bytes或者字符串转换成对象。反序列化
+
+    2.pickle（比较重要）
+        把python中所有的对象都可以转化为bytes。进行存储和传输
+        dumps()序列化  不写文件
+        loads() 反序列化  不读文件
+        dump()
+        load()
+    3.shelve
+        小型数据库  操作的是文件类型的字典
+        shelve.open(文件，writeback=Ture)
+    4.json（重点）
+        前后端数据交互的通用的数据格式
+        dumps() 把字典转化为字符串
+        loads()  把字符串转化成字典
+
+        处理中文
+            ensure_ascii=False
+    5.configparser
+        处理配置文件的
+        把配置文件作为一个大的字典处理就行了

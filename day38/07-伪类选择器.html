@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪类选择器</title>
+		<style type="text/css">
+			
+			/*没有被访问的a标签的颜色*/
+			a:link{
+				color: green;
+			}
+			/*访问过后的a标签的颜色*/
+			a:visited{
+				color: yellow;
+			}
+			/*鼠标悬停变色*/
+			a:hover{
+				color: darkturquoise;
+			}
+			/*按住的时候显示的颜色*/
+			a:active{
+				color: #0000FF;
+			}
+			/*span悬浮的时候显示以下的属性*/
+			span:hover{
+				color: red;
+				font-size: 40px;
+				text-decoration: underline;
+			}
+			.child{
+				display: none;
+			}
+			
+			/*把鼠标悬浮在father上child有以下的属性*/
+			.father:hover .child{
+				color: gray;
+				font-size: 50px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">百度一下</a>
+		<span>alex</span>
+		<div id="" class="father">
+			wusir
+			<p class="child">alex</p>
+		</div>
+	</body>
+</html>

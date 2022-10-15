@@ -1,0 +1,66 @@
+内容回顾：
+    1.标签
+        -行内标签
+            （1）在一行内显示   a span  i  em strong  b label等
+            （2）不能设置宽高，默认的宽和高是内容的宽高
+            行内块标签：input  img
+                （1）在一行内显示
+                （2）可以设置宽高
+         -块级标签：h1（页面只有一个h1，为了这个搜素引擎）~h6 div ul ol dl dt dl dd form table tr td
+            （1）独占一行
+            （2）可以设置宽高，如果不设置宽，默认是父盒子的100%宽
+
+    2.一些网页布局结构
+    3.div模型
+        division：分割
+
+     div+span
+     a:
+        href:超链接的地址
+        target: _self 默认 在当前中打开链接地址
+                _blank   在空白的页面打开连接地址
+
+今日内容：
+    （1）标签的使用：
+        a:
+            （1）超链接
+             href:超链接的地址
+             target: _self 默认 在当前中打开链接地址
+                     _blank   在空白的页面打开连接地址
+            （2）标签内部跳转
+            锚点  默认有点击行为。我们可以javascript:void(0);阻止a标签的默认点击行为。
+       img
+       		src：链接的图片资源
+       		alt:图片资源加载失败。显示文本
+       ul: unordered list  无序列表  ul下的子元素只能是li
+       		li
+       		type=“circle” 圆心
+       		type=“square” 方块
+       ol: ordered  list   有序列表
+       		
+       dl：定义列表
+       		dt：定义标题
+       		dd：定义描述
+       table:
+       		tr:表格行
+       		td：表格描述
+       	form
+       		http协议
+       		action：提交的服务器网址
+       		method：get（默认） post（应用：登陆注册，上传文件）
+       		页面中的a img link 标签   默认是get请求
+       		input
+       			type:{
+       				text:文本输入框
+       				password：密码输入框
+       				file：提交文件时一定要用post
+       				submit：提交按钮
+       				button：普通按钮
+       				}
+       			name：提交到服务器端的key
+       			value：显示的文本内容，与服务器端的value
+       		label：
+       			for：是与下面的某个表单控件的id属性进行关联
+      （2）css 层叠样式表
+      		作用：修饰网页结构
+     （3）css的引用方式

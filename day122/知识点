@@ -1,0 +1,15 @@
+内容回顾：
+    第一部分：flask部分
+        1.flask和django区别？
+        2.flask中配置文件？
+            使用app.config.form_object('路径.xx.path')
+            技术点：
+                -rsplit
+                -importlib
+                -getattr
+今日内容：
+    1.flask-sqlalchemy
+    2.flask-script
+    3.flask-migrate
+    结果：Flask目录结构
+    4.爬虫相关

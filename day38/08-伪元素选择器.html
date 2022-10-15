@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪元素选择器</title>
+		<style type="text/css">
+			/*设置首字母的格式*/
+			p:first-letter{
+				color: red;
+				font-size: 26px;
+			}
+			/*用伪元素时  属性一定是content*/
+			
+			/*伪元素选择器与后面的布局有很大的关系*/
+			p:before{
+				content: '￥';
+			}
+			p:after{
+				content: '&';
+			}
+			.box2{
+				display: block;
+				/*隐藏元素  不占位置*/
+				/*display: none;*/
+				visibility: hidden;
+				height: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="box">
+			alex
+		</p>
+		<span id="" class="box2">
+			alex
+		</span>
+		<div id="">
+			wusir
+			
+		</div>
+	</body>
+</html>

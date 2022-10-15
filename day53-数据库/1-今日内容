@@ -1,0 +1,46 @@
+
+
+1.SQL的基本概念
+2.MySQL的基本管理
+3.基本的SQL语句
+    制作服务(管理员)
+        mysqld -install
+        net start mysql
+    数据库
+            show databases; #查看数据库
+            use 数据库名字
+        增
+            create database db1 ;
+        删
+            drop database db1;
+        改
+            alter database db1 charset gbk;
+        查
+            show create database db1;  # 查看当前创建的数据库
+            show databases;  # 查看所有的数据库
+    表
+            use db1; #切换文件夹
+            select database(); #查看当前所在文件夹
+        增
+            create table t1(id int,name char);
+        删
+            # 删除表   drop table t1;
+        改
+        查
+            # 查看当前的这张t1表   show create table t1;
+            # 查看所有的表         show tables;
+            # 查看表的详细信息     desc t1;
+    记录
+        增
+            # 插入一条数据，规定id，name数据leilei
+               insert t1(id,name) values(1,"mjj01"),(2,"mjj02"),(3,"mjj03");
+        删
+            delete from t1;
+            delete from t1 where id=2;
+        改
+            update db1.t1 set name='zhangsan';
+            update db1.t1 set name='alex' where id=2;
+        查
+            select id from db1.t1;
+            select id,name from db1.t1;
+            select * from db1.t1;

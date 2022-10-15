@@ -1,0 +1,79 @@
+内容回顾：
+	1.浮动
+		标准文档流 
+		作用：实现元素并排
+		特点：
+			第一个盒子会贴父盒子的边，第二个会贴第一个盒子的边。。
+		特性：
+			1.脱离标准文档流
+			2.收缩的效果
+			3.字围
+			4.设置浮动，任意的标签 都可以设置宽高
+			
+		要浮动一起浮动   有浮动清除浮动
+		浮动带来的影响：
+			如果父盒子不设置宽高，子盒子浮动了，因为子盒子脱离了标准文档流，那么他们不在页面占位置，撑不起父盒子的高度
+		清除浮动：
+			1.给父盒子设置固定高度（后期不好维护）
+			2.内墙法
+				给浮动元素的后面加一个空的块级标签，添加clearfix类， 设置该属性为clear：both
+			3.伪元素清除法
+				.clearfix：after{
+					content:'.';
+					clear:both;
+					display:block;
+					visibility:hidden;
+					height:0;
+				}
+			4.overflow:hidden
+	2.display
+		inline
+		block
+		inline-block
+		none
+今日内容：
+	1.浮动的特性
+		1.浮动的元素脱标
+		2.浮动的元素互相贴靠
+		3.浮动的元素由"字围"效果
+		4.收缩的效果
+		
+		margin 如果浮动了  ，那么垂直方向上不会出现塌陷问题 
+		
+		如果盒子居中：margin：0 auto  ；如果盒子浮动了，margin：0 auto 就不起作用了
+		让浮动的盒子居中：给浮动盒子加一个父盒子，设置宽高与浮动盒子一样大小，并且overflow：hidden；设置该盒子margin：0 auto
+		文本水平居中：text-aline：center
+		文本垂直居中：行高=盒子的高度
+			
+		在css中有三种方式让盒子“脱标”
+			1.浮动float
+			2.绝对定位
+			3.固定定位		
+	2.常用css的特性
+		1.文本对其   ：text-aline
+			属性值：none/left/right/center
+		2.文本首行缩进：text-indent：
+		3.文本修饰： text-decoration
+			属性值：none（默认），underline（下划线）
+			
+	文本水平居中：text-align：center
+	文本垂直居中：行高=盒子的高度
+	3.background-image    精灵图技术
+	
+	4.定位：
+		默认：position：static 静态定位
+						relative  相对定位
+						absolute  绝对定位
+						fixed 固定定位
+		-relative：
+			如果仅仅设置标准文档流的盒子为相对定位，那么和普通的盒子没有任何区别
+			不脱标
+			参考点：  相对于原来的位置
+			
+			形影分离
+			
+			作用：
+				1.层级越高，做压盖（不建议）
+				2，布局方案 “子绝父相”
+			
+			

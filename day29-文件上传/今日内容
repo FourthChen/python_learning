@@ -1,0 +1,15 @@
+
+day29
+
+1.异常退出
+    data=comm.recv(1024) #阻塞
+    监听的套接字对象conn断开连接：
+    针对window：异常报错
+    针对linux：接受一个空的data
+2.ssh
+
+3.文件上传
+
+4.socketserver(并发)
+    1.socketserver的使用
+    2.解析socketserver的源码

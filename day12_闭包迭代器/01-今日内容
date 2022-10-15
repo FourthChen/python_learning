@@ -1,0 +1,63 @@
+三.今日内容
+    1.函数名的应用（第一类对象）
+        函数名的命名规范和变量是一样的
+        函数名其实就是变量名
+        #可以作为列表中的元素进行存储
+        # def func1():
+        #     print('我是1')
+        # def func2():
+        #     print('我是2')
+        # def func3():
+        #     print('我是3')
+        # lst=[func1,func2,func3]
+        # for el in lst:
+        #     print(el)
+        #可以作为参数传递给函数
+        # def my():
+        #     print('我是my')
+        # def proxy(fn):  #代理模式，装饰器
+        #     print('在处理之前')
+        #     fn()
+        #     print('在处理之后')
+        # proxy(my)
+        可以作为函数的返回值
+        def func():
+            def inner():
+                pass
+            return inner
+         func()()
+    2.闭包
+        闭包：在内层函数中访问外层函数的局部函数
+        好处：
+            1.保护你的变量不受外界影响
+            2.可以让变量常驻内存
+        写法：
+            def outer():
+                a=10
+                def inner():
+                    print(a)
+                return inner
+    3.迭代器
+        使用dir来查看该数据包含了那些方法
+        用来遍历列表，字符串，元组.....可迭代对象
+        可迭代对象：Iterable，里面有__iter__()可以获取迭代器,没有__next__()
+        迭代器：    Iterator，里面有__iter__()可以获取迭代器,有__next__()
+
+        迭代器的特点：
+            1.只能向前，
+            2.惰性机制，
+            3.省内存(生成器)
+
+        for循环的内部机制
+            1.首先获取到迭代器
+            2.使用while循环获取数据
+            3.it.__next__()来获取数据
+            4.处理异常  try：xx  except  StopIteration
+==============重点======================
+            it=lst.__iter__()   #获取到迭代器，lst为一个列表
+                while 1:
+                   try:           #尝试执行
+                      el=it.__next__()
+                      print(el)
+                   except StopIteration:  #处理错误
+                      break

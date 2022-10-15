@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css引用方式</title>
+		<!--内接样式-->
+		<style type="text/css">
+			/*选择器*/
+			span{
+				color: green;
+				font-size: 20px;
+			}
+		</style>
+		<!--权重：优先级高  权重大   谁在页面下方谁的权重大-->
+		<!--外接样式-->
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="javascript/index.js">
+			
+		</script>
+	</head>
+	<body>
+		<!--行内样式  的优先级时最高的   -->
+		<p style="color: red; font-size: 30px;">wusir</p>
+		<span >alex</span>
+		<input type="radio" name="" id="" value="" />
+	</body>
+</html>
